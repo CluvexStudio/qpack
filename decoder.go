@@ -31,7 +31,7 @@ type Decoder struct{}
 type DecodeFunc func() (HeaderField, error)
 
 // NewDecoder returns a new Decoder.
-func NewDecoder() *Decoder {
+func NewDecoder(_ ...func(HeaderField)) *Decoder {
 	return &Decoder{}
 }
 
